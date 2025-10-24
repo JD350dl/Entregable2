@@ -111,7 +111,7 @@ plt.show()
 # EVALUACIÓN Y PREDICCIONES
 # ==============================
 test_loss, test_acc = model.evaluate(val_ds)
-print(f"\n📊 Precisión final en validación: {test_acc * 100:.2f}%")
+print(f"Precisión final en validación: {test_acc * 100:.2f}%")
 
 for images, labels in val_ds.take(1):
     preds = model.predict(images)
@@ -145,4 +145,3 @@ def predict_image(path):
     plt.title(f"Predicción: {name} ({confidence:.1f}%)")
     plt.axis("off")
     plt.show()
-
